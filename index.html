@@ -472,15 +472,159 @@
         <span class="section-label">Projects</span>
         <h2 class="projects-heading">Things I've <span class="highlight-red">built</span>.</h2>
       </div>
-      <div class="coming-soon-wrap reveal reveal-delay-1">
-        <div class="coming-soon-card">
-          <div class="cs-icon">🚧</div>
-          <h3 class="cs-title">Coming Soon</h3>
-          <p class="cs-desc">Working on something exciting. Stay tuned!</p>
-          <div class="cs-dots">
-            <span></span><span></span><span></span>
+
+      <div class="proj-search-wrap reveal reveal-delay-1">
+        <div class="proj-search-box">
+          <svg class="proj-search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M13 13L17 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <input type="text" id="projSearch" class="proj-search-input" placeholder="Search projects..." autocomplete="off" />
+          <span class="proj-search-clear" id="projClear">✕</span>
+        </div>
+        <p class="proj-search-count" id="projCount"></p>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Playwright Automation -->
+        <div class="proj-card reveal">
+          <div class="proj-card-top">
+            <div class="proj-icon-wrap">
+              <img src="img/logo-playwright.png" alt="Playwright" class="proj-icon-img">
+            </div>
+            <span class="proj-type">Automation Framework</span>
+          </div>
+          <h3 class="proj-title">Web Automation — Playwright</h3>
+          <p class="proj-desc">End-to-end web automation framework built with Playwright. Covers UI testing, API testing, and CI/CD integration with GitHub Actions.</p>
+          <div class="proj-tags">
+            <span><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+            <span><img src="img/logo-playwright.png" alt="">Playwright</span>
+            <span><i class="devicon-github-original"></i>GitHub Actions</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://github.com/adittriyadiii" target="_blank" class="proj-btn proj-btn--primary">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
           </div>
         </div>
+
+        <!-- WebdriverIO Automation -->
+        <div class="proj-card reveal reveal-delay-1">
+          <div class="proj-card-top">
+            <div class="proj-icon-wrap">
+              <img src="https://cdn.simpleicons.org/webdriverio/EA5906" alt="WebdriverIO" class="proj-icon-img">
+            </div>
+            <span class="proj-type">Automation Framework</span>
+          </div>
+          <h3 class="proj-title">Mobile Automation — WebdriverIO</h3>
+          <p class="proj-desc">Mobile automation framework using WebdriverIO and Appium. Supports Android and iOS testing with Cucumber BDD for readable test scenarios.</p>
+          <div class="proj-tags">
+            <span><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+            <span><img src="https://cdn.simpleicons.org/webdriverio/EA5906" alt="">WebdriverIO</span>
+            <span><img src="https://cdn.simpleicons.org/appium/662D91" alt="">Appium</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://github.com/adittriyadiii" target="_blank" class="proj-btn proj-btn--primary">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Test Case Documentation -->
+        <div class="proj-card reveal reveal-delay-2">
+          <div class="proj-card-top">
+            <div class="proj-icon-wrap proj-icon-wrap--excel">
+              <img src="img/logo-excel.png" alt="Excel" class="proj-icon-img">
+            </div>
+            <span class="proj-type">QA Documentation</span>
+          </div>
+          <h3 class="proj-title">Test Case Documentation</h3>
+          <p class="proj-desc">Structured test case documentation covering functional, regression, and edge case scenarios. Demonstrates systematic QA approach and analytical skills.</p>
+          <div class="proj-tags">
+            <span>📋 Test Cases</span>
+            <span>🐞 Bug Report</span>
+          </div>
+          <div class="proj-actions">
+            <a href="#" target="_blank" class="proj-btn proj-btn--excel">
+              <img src="img/logo-excel.png" alt="" style="width:14px;height:14px;object-fit:contain;">
+              View Document
+            </a>
+          </div>
+        </div>
+
+        <!-- Codewars -->
+        <div class="proj-card proj-card--codewars reveal reveal-delay-3">
+          <div class="proj-card-top">
+            <div class="proj-icon-wrap proj-icon-wrap--cw">
+              <img src="img/logo-codewars.png" alt="Codewars" class="proj-icon-img">
+            </div>
+            <span class="proj-type">Coding Challenge</span>
+          </div>
+          <h3 class="proj-title">Codewars Challenges</h3>
+          <p class="proj-desc">Solving algorithmic and logical programming challenges to sharpen problem-solving skills. Currently working through kata challenges across multiple languages.</p>
+          <div class="proj-cw-rank">
+            <div class="cw-belt">
+              <span class="cw-belt-label">Current Rank</span>
+              <div class="cw-kyu-badge">
+                <span class="cw-kyu-num">8</span>
+                <span class="cw-kyu-text">kyu</span>
+              </div>
+            </div>
+            <div class="cw-langs">
+              <span><i class="devicon-javascript-plain colored"></i></span>
+            </div>
+          </div>
+          <div class="proj-actions">
+            <a href="https://www.codewars.com/users/adittriyadiii" target="_blank" class="proj-btn proj-btn--cw">
+              <img src="https://cdn.simpleicons.org/codewars/ffffff" alt="" style="width:14px;height:14px;">
+              View Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- API Automation - Playwright -->
+        <div class="proj-card reveal reveal-delay-1">
+          <div class="proj-card-top">
+            <div class="proj-icon-wrap">
+              <img src="img/logo-playwright.png" alt="Playwright" class="proj-icon-img">
+            </div>
+            <span class="proj-type">API Testing</span>
+          </div>
+          <h3 class="proj-title">API Automation — Playwright</h3>
+          <p class="proj-desc">API automation testing using Playwright's built-in request context. Covers endpoint validation, authentication flows, response schema checks, and chained API requests.</p>
+          <div class="proj-tags">
+            <span><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+            <span><img src="img/logo-playwright.png" alt="">Playwright</span>
+            <span><i class="devicon-github-original"></i>GitHub Actions</span>
+          </div>
+          <div class="proj-actions">
+            <span class="proj-btn proj-btn--soon">🚧 Coming Soon</span>
+          </div>
+        </div>
+
+        <!-- K6 Performance Testing -->
+        <div class="proj-card reveal reveal-delay-2">
+          <div class="proj-card-top">
+            <div class="proj-icon-wrap">
+              <img src="https://cdn.simpleicons.org/k6/7D64FF" alt="K6" class="proj-icon-img">
+            </div>
+            <span class="proj-type">Performance Testing</span>
+          </div>
+          <h3 class="proj-title">Load Testing — K6</h3>
+          <p class="proj-desc">Performance and load testing scripts using K6 to measure response time, throughput, and system stability under various load conditions and stress scenarios.</p>
+          <div class="proj-tags">
+            <span><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+            <span><img src="https://cdn.simpleicons.org/k6/7D64FF" alt="">K6</span>
+            <span><i class="devicon-github-original"></i>GitHub Actions</span>
+          </div>
+          <div class="proj-actions">
+            <span class="proj-btn proj-btn--soon">🚧 Coming Soon</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

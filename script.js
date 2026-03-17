@@ -108,3 +108,32 @@ revealEls.forEach(el => revealObserver.observe(el));
 
   setTimeout(type, 700);
 })();
+
+// Project search
+const projSearch = document.getElementById('projSearch');
+const projClear  = document.getElementById('projClear');
+const projCount  = document.getElementById('projCount');
+
+if (projSearch) {
+  projSearch.addEventListener('input', () => {
+    const q = projSearch.value.trim().toLowerCase();
+    const cards = document.querySelectorAll('#projectsGrid .proj-card');
+    let visible = 0;
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      const match = q === '' || text.includes(q);
+      card.classList.toggle('hidden', !match);
+      if (match) visible++;
+    });
+
+    projClear.classList.toggle('visible', q.length > 0);
+    projCount.textContent = q.length > 0 ? `${visible} project${visible !== 1 ? 's' : ''} found` : '';
+  });
+
+  projClear.addEventListener('click', () => {
+    projSearch.value = '';
+    projSearch.dispatchEvent(new Event('input'));
+    projSearch.focus();
+  });
+}
